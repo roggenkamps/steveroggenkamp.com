@@ -56,12 +56,14 @@ data AppSettings = AppSettings
 
 instance FromJSON AppSettings where
     parseJSON = withObject "AppSettings" $ \o -> do
-        let defaultDev =
+        let defaultDev = True
+{-
 #if DEVELOPMENT
                 True
 #else
                 False
 #endif
+-}
         appStaticDir              <- o .: "static-dir"
         appDatabaseConf           <- o .: "database"
         appRoot                   <- o .: "approot"

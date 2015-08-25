@@ -1,0 +1,5 @@
+<h1>Error encountered
+
+<ul>
+  $forall errormsg <- errorMsgs
+    <li>Error:  #{errormsg}

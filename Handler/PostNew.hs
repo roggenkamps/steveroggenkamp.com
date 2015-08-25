@@ -7,8 +7,8 @@ import Yesod.Text.Markdown
 blogPostEditForm :: AForm Handler BlogPost
 blogPostEditForm = BlogPost 
             <$> areq textField     (bfs ("Title" :: Text)) Nothing
-            <*> lift (liftIO getCurrentTime)
-            <*> lift (liftIO getCurrentTime)
+--            <*> lift (liftIO getCurrentTime)
+--            <*> lift (liftIO getCurrentTime)
             <*> areq markdownField (bfs ("Article" :: Text)) Nothing
 
 getPostNewR :: Handler Html
@@ -21,9 +21,10 @@ getPostNewR = do
 
 postPostNewR :: Handler Html
 postPostNewR = do
-    ((res, widget), enctype)  <- runFormPost $ renderBootstrap3 BootstrapBasicForm blogPostEditForm
+    ((res, widget), enctype)  <- runFormPostNoToken $ renderBootstrap3 BootstrapBasicForm blogPostEditForm
     case res of
       FormSuccess blogPost -> do
               blogPostId <- runDB $ insert blogPost
               redirect $ PostDetailsR blogPostId
-      _ -> defaultLayout $(widgetFile "posts/new")
+      FormFailure errorMsgs -> defaultLayout $(widgetFile "errorpage")
+      _                    -> defaultLayout $(widgetFile "posts/new")
