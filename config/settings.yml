@@ -18,12 +18,13 @@ ip-from-header: "_env:IP_FROM_HEADER:false"
 # skip-combining: false
 
 database:
-  user:     "_env:PGUSER:steveroggenkamp"
-  password: "_env:PGPASS:steveroggenkamp"
+  user:     "_env:PGUSER:steveroggenkampblog"
+  password: "_env:PGPASS:steveroggenkampblog"
   host:     "_env:PGHOST:localhost"
   port:     "_env:PGPORT:5432"
-  database: "_env:PGDATABASE:steveroggenkamp"
+  database: "_env:PGDATABASE:steveroggenkampblog"
   poolsize: "_env:PGPOOLSIZE:10"
 
-copyright: Insert copyright statement here
+copyright: Steve Roggenkamp's Blog is licensed under a Creative Commons Attribution-ShareAlke 4.0 International License.
+
 #analytics: UA-YOURCODE
