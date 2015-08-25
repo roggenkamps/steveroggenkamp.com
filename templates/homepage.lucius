@@ -24,6 +24,14 @@ footer {
   text-align: center;
 }
 
+#pgHeaderImage {
+  float: left;
+  }
+
+#pgHeaderDescription {
+  float: right;
+  }
+
 #pgNavBar {
 }
 

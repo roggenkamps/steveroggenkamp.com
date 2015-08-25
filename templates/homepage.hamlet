@@ -1,7 +1,11 @@
 <div id="pgPageContainer">
   <div id="pgHeader">
-    <p>Welcome to Steve Roggenkamp's web site!
+    <div id="pgHeaderImage">
+      <img src="static/images/StevePicture.jpg">
+    <div id="pgHeaderDescription">
+      <p>Welcome to Steve Roggenkamp's web site!
   <div id="pgNavBar">
+    <p>Nav content
   <div id="pgContentBody">
     <div id="pgLeftContent">
       <p><a href="/posts/new">Post a new article</a>
