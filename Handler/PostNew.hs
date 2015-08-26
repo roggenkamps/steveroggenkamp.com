@@ -21,7 +21,7 @@ getPostNewR = do
 
 postPostNewR :: Handler Html
 postPostNewR = do
-    ((res, widget), enctype)  <- runFormPostNoToken $ renderBootstrap3 BootstrapBasicForm blogPostEditForm
+    ((res, widget), enctype)  <- runFormPost $ renderBootstrap3 BootstrapBasicForm blogPostEditForm
     case res of
       FormSuccess blogPost -> do
               blogPostId <- runDB $ insert blogPost
