@@ -1,13 +1,12 @@
-<div id="pgPageContainer">
-  <div id="pgHeader">
-    <div id="pgHeaderImage">
-      <img src="static/images/StevePicture.jpg">
-    <div id="pgHeaderDescription">
-      <p>Welcome to Steve Roggenkamp's web site!
-  <div id="pgNavBar">
-    <p>Nav content
-  <div id="pgContentBody">
-    <div id="pgLeftContent">
-      <p><a href="/posts/new">Post a new article</a>
-    <div id="pgRightContent">
-      <p>Navigation area!
+<article>
+  <h1>Article Title
+  <p class="subtitle">by Steve Roggenkamp
+  <section>
+    <p>Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte’s books and handouts. Tufte’s style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully chosen typography.
+    <p>Tufte CSS was created by <a href="http://www.daveliepmann.com">Dave Liepmann</a> and is now an Edward Tufte project. The original idea was cribbed from <a href="https://tufte-latex.github.io/tufte-latex/">Tufte-<span class="latex">L<span class="latex-sup">a</span>T<span class="latex-sub">e</span>X</span></a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown’s Tufte Handout format</a> <label for="sn-tufte-handout" class="margin-toggle sidenote-number"></label> <input type="checkbox" id="sn-tufte-handout" class="margin-toggle"/>.   <span class="sidenote">This page was in fact originally an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout Example</a> PDF.</span>We give hearty thanks to all the people who have contributed to those projects.
+    <p>If you see anything that Tufte CSS could improve, we welcome your contribution in the form of an issue or pull request on the GitHub project: <a href="https://github.com/edwardtufte/tufte-css">tufte-css</a>. Please note the <a href="https://github.com/edwardtufte/tufte-css#contributing">contribution guidelines</a>.
+    <section>
+      <h2>Getting Started
+      <p>To use Tufte CSS, copy <span class="code">tufte.css</span> and the <span class="code">et-book</span> directory of font files to your project directory, then add the following to your HTML document’s <span class="code">head</span> block:
+      <pre class="code">&lt;link rel="stylesheet" href="tufte.css"/&gt;</pre>
+      <p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.

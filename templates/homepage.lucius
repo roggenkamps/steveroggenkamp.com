@@ -16,35 +16,46 @@ footer {
     margin-left: 20px
 }
 
-#pgPageContainer {
-  width: 100%;
-}
-
-#pgHeader {
-  text-align: center;
-}
-
-#pgHeaderImage {
-  float: left;
-  }
-
-#pgHeaderDescription {
-  float: right;
-  }
-
-#pgNavBar {
-}
-
-#pgContentBody {
+#srContentBody {
   padding-bottom: 2px;
 }
 
-#pgLeftContent {
+#srHeader {
+  text-align: center;
+  width: 100%;
+}
+
+#srHeaderDescription {
+  float: right;
+  position: relative;
+  width: 200px
+  }
+
+#srHeaderImage {
   float: left;
+  position: relative;
+  }
+
+#srLeftContent {
+  display: block;
+  float: left;
+  position: relative;
   width: 75%;
   }
 
-#pgRightContent {
+#srNavBar {
+  display: block;
+  width: 100%;
+}
+
+#srPageContainer {
+  width: 100%;
+}
+
+#srRightContent {
+  display: block;
   float: right;
+  position: relative;
   width: 25%;
   }
+

@@ -1,0 +1,12 @@
+/* steveroggenkamp.css - styles for steveroggenkamp.com */
+
+div.header { text-align: center;
+	     width: 100%; }
+
+div.leftpanel { float: left; 
+                width: 75%;
+              }
+
+div.leftpanel { float: right; 
+                width: 75%;
+              }
