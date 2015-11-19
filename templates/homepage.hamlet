@@ -10,6 +10,7 @@
     <p class="lead blog-description">My musings about computers, bicycling, food and anything else that I find interesting.
   <div class="row">
     <div class="col-sm-9 blog-main">
+      <div class="blog-post" resource="http://steveroggenkamp.com/posts/1">
       $forall Entity blogPostId blogPost <- blogPosts
         <div class="blog-post" resource="http://steveroggenkamp.com/posts/1">
           <h1 property="title">#{blogPostTitle blogPost}
