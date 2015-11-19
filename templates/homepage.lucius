@@ -26,7 +26,6 @@ footer {
 }
 
 #srHeaderDescription {
-  float: right;
   position: relative;
   width: 200px
   }

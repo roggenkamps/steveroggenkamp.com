@@ -1,13 +1,49 @@
-<div class="navbar">
-  <div class="navbar-inner">
-    <a class="brand" href="/">Home</a>
-    <ul class="nav">
-      <li class="active"><a href="/">Home</a></li>
-      <li><a href="/posts">Blog posts</a></li>
-      <li><a href="/posts">Contact</a></li>
+<div class="blog-masthead">
+  <div class="container">
+    <div class="blog-nav">
+      <a class="blog-nav-item active" href="/">Home</a>
+      <a class="blog-nav-item" href="/posts/1">Posts</a>
+      <a class="blog-nav-item" href="/about">About</a>
+<div class="container">
+  <div class="blog-header">
+    <h1 class="blog-title">Rogg's Blog
+    <p class="lead blog-description">My musings about computers, bicycling, food and anything else that I find interesting.
+  <div class="row">
+    <div class="col-sm-9 blog-main">
+      $forall Entity blogPostId blogPost <- blogPosts
+        <div class="blog-post" resource="http://steveroggenkamp.com/posts/1">
+          <h1 property="title">#{blogPostTitle blogPost}
+          <p class="blog-post-meta">Created: <span proprety="created">Jan 1, 2014</span><br/>Revised: <span proprety="revised">Jan 7, 2014</span>
+           #{blogPostArticle blogPost}
+    <div class="col-sm-3 blog-sidebar">
+      <div class="sidebar-module">
+          <h3>Interesting reads
+          <p><a href="http://www.computerworld.com/article/3005462/security/millions-of-sensitive-records-exposed-by-mobile-apps-leaking-back-end-credentials.html">Mobile apps expose back-end credentials</a>
+          <p><a href="https://aerotwist.com/blog/the-cost-of-frameworks/">The cost of frameworks</a>
+      <div class="sidebar-module">
+        <h3>About
+        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+      <div class="sidebar-module">
+        <h3>Archives
+        <ol class="list-unstyled">
+          <li><a href="#">December 2015</a>
+          <li><a href="#">November 2015</a>
+          <li><a href="#">October 2015</a>
+          <li><a href="#">September 2015</a> 
+          <li><a href="#">August 2015</a>
+          <li><a href="#">July 2013</a>
+          <li><a href="#">June 2013</a>
+          <li><a href="#">May 2013</a>
+          <li><a href="#">April 2013</a>
+          <li><a href="#">March 2015</a>
+          <li><a href="#">February 2015</a>
+          <li><a href="#">January 2015</a>
+      <div class="sidebar-module">
+        <h3>Elsewhere
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub</a>
+          <li><a href="#">Twitter</a>
+          <li><a href="#">Facebook</a>
 
-<div class="row">
-  <div class="span3">
-    <h1>Article title
-    <article>
-    <p>Something nice goes here.
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
