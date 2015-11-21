@@ -1,6 +1,8 @@
 module Handler.PostDetails where
 
 import Import
+import Handler.Common
+import Database.Persist.Sql
 
 getPostDetailsR :: BlogPostId -> Handler Html
 getPostDetailsR blogPostId = do

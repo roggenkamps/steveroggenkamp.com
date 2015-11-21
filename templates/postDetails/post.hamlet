@@ -1,4 +1,15 @@
-<h1>#{blogPostTitle blogPost}
-<p>Posted  2015-08-24
-<article>
-  #{blogPostArticle blogPost}
+<div class="blog-masthead">
+  <div class="container">
+    <div class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item active" href="/posts/index">Posts</a>
+      <a class="blog-nav-item" href="/about">About</a>
+<div class="container">
+  <div class="blog-header">
+    <div class="blog-post" resource="http://steveroggenkamp.com/posts/#{show $ fromSqlKey blogPostId}">
+    <h1 property="title"><a href="http://localhost:3000/posts/#{show $ fromSqlKey blogPostId}">#{blogPostTitle blogPost}</a>
+    <p class="blog-post-meta">Created: <span proprety="created">#{renderTimeStamp $ blogPostPostDate blogPost}</span><br/>Revised: <span proprety="revised">#{renderTimeStamp $ blogPostEditDate blogPost}</span>
+    #{blogPostArticle blogPost}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
