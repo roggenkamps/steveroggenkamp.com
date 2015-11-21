@@ -2,7 +2,7 @@
   <div class="container">
     <div class="blog-nav">
       <a class="blog-nav-item active" href="/">Home</a>
-      <a class="blog-nav-item" href="/posts/1">Posts</a>
+      <a class="blog-nav-item" href="/posts/index">Posts</a>
       <a class="blog-nav-item" href="/about">About</a>
 <div class="container">
   <div class="blog-header">
@@ -10,11 +10,10 @@
     <p class="lead blog-description">My musings about computers, bicycling, food and anything else that I find interesting.
   <div class="row">
     <div class="col-sm-9 blog-main">
-      <div class="blog-post" resource="http://steveroggenkamp.com/posts/1">
       $forall Entity blogPostId blogPost <- blogPosts
-        <div class="blog-post" resource="http://steveroggenkamp.com/posts/1">
-          <h1 property="title">#{blogPostTitle blogPost}
-          <p class="blog-post-meta">Created: <span proprety="created">Jan 1, 2014</span><br/>Revised: <span proprety="revised">Jan 7, 2014</span>
+        <div class="blog-post" resource="http://steveroggenkamp.com/posts/#{show $ fromSqlKey blogPostId}">
+          <h1 property="title"><a href="http://localhost:3000/posts/#{show $ fromSqlKey blogPostId}">#{blogPostTitle blogPost}</a>
+          <p class="blog-post-meta">Created: <span proprety="created">#{renderTimeStamp $ blogPostPostDate blogPost}</span><br/>Revised: <span proprety="revised">#{renderTimeStamp $ blogPostEditDate blogPost}</span>
            #{blogPostArticle blogPost}
     <div class="col-sm-3 blog-sidebar">
       <div class="sidebar-module">

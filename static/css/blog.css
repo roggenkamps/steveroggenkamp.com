@@ -260,6 +260,9 @@ p.subtitle { font-style: italic;
              display: block;
              line-height: 1; }
 
+.list-title { font-style: italic;
+              font-size: 1.8rem; }
+
 .numeral { font-family: et-book-roman-old-style; }
 
 .danger { color: red; }

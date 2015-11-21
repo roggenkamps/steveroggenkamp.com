@@ -5,6 +5,8 @@
 /robots.txt RobotsR GET
 
 / HomeR GET
-/posts/new PostNewR GET POST
+/posts/index        PostsR       GET
+/posts/new          PostNewR     GET POST
 /posts/!#BlogPostId PostDetailsR GET
+
 

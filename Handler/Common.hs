@@ -14,3 +14,10 @@ getFaviconR = return $ TypedContent "image/x-icon"
 getRobotsR :: Handler TypedContent
 getRobotsR = return $ TypedContent typePlain
                     $ toContent $(embedFile "config/robots.txt")
+
+renderTimeStamp :: UTCTime -> String
+renderTimeStamp t = formatTime defaultTimeLocale "%d %b %Y %X" t
+
+renderDate:: UTCTime -> String
+renderDate t = formatTime defaultTimeLocale "%d %b %Y" t
+
