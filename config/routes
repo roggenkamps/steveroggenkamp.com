@@ -8,6 +8,4 @@
 /posts/index             PostsR       GET
 /posts/new               PostNewR     GET POST
 /posts/!#BlogPostId      PostDetailsR GET
-/posts/edit/!#BlogPostId PostEditR    GET
-
-
+/posts/edit/!#BlogPostId PostEditR    GET POST

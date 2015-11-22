@@ -1,5 +1,5 @@
 <h1>Update a post
 
-<form method=post action=@{PostNewR} enctype=#{enctype}>
+<form method=post action="/posts/edit/#{show $ fromSqlKey blogPostId}" enctype=#{enctype}>
   ^{widget}
   <button class="btn btn-default">Update
