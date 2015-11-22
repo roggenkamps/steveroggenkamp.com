@@ -1,0 +1,5 @@
+<h1>Update a post
+
+<form method=post action=@{PostNewR} enctype=#{enctype}>
+  ^{widget}
+  <button class="btn btn-default">Update
