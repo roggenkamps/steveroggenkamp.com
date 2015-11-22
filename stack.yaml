@@ -4,5 +4,6 @@ flags:
     dev: true
 packages:
 - '.'
-extra-deps: []
+extra-deps:
+- time-qq-0.0.0.2
 resolver: lts-3.1

@@ -4,8 +4,8 @@ import Import
 import Yesod.Form.Bootstrap3
 import Yesod.Text.Markdown
 
-blogPostEditForm :: AForm Handler BlogPost
-blogPostEditForm = BlogPost 
+blogPostNewForm :: AForm Handler BlogPost
+blogPostNewForm = BlogPost 
             <$> areq textField     (bfs ("Title" :: Text)) Nothing
             <*> lift (liftIO getCurrentTime)
             <*> lift (liftIO getCurrentTime)
@@ -13,7 +13,7 @@ blogPostEditForm = BlogPost
 
 getPostNewR :: Handler Html
 getPostNewR = do
-    (widget, enctype) <- generateFormPost $ renderBootstrap3 BootstrapBasicForm blogPostEditForm
+    (widget, enctype) <- generateFormPost $ renderBootstrap3 BootstrapBasicForm blogPostNewForm
     defaultLayout $ do
         $(widgetFile "posts/new")
 
@@ -21,7 +21,7 @@ getPostNewR = do
 
 postPostNewR :: Handler Html
 postPostNewR = do
-    ((res, widget), enctype)  <- runFormPostNoToken $ renderBootstrap3 BootstrapBasicForm blogPostEditForm
+    ((res, widget), enctype)  <- runFormPostNoToken $ renderBootstrap3 BootstrapBasicForm blogPostNewForm
     case res of
       FormSuccess blogPost -> do
               blogPostId <- runDB $ insert blogPost
