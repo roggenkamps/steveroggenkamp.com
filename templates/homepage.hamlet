@@ -11,8 +11,8 @@
   <div class="row">
     <div class="col-sm-9 blog-main">
       $forall Entity blogPostId blogPost <- blogPosts
-        <div class="blog-post" resource="http://steveroggenkamp.com/posts/#{show $ fromSqlKey blogPostId}">
-          <h1 property="title"><a href="http://localhost:3000/posts/#{show $ fromSqlKey blogPostId}">#{blogPostTitle blogPost}</a>
+        <div class="blog-post" resource=@{PostDetailsR blogPostId}>
+          <h1 property="title"><a href=@{PostDetailsR blogPostId}>#{blogPostTitle blogPost}</a>
           <p class="blog-post-meta">Created: <span proprety="created">#{renderTimeStamp $ blogPostPostDate blogPost}</span><br/>Revised: <span proprety="revised">#{renderTimeStamp $ blogPostEditDate blogPost}</span>
            #{blogPostArticle blogPost}
     <div class="col-sm-3 blog-sidebar">

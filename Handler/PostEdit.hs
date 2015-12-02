@@ -28,8 +28,9 @@ postPostEditR blogPostId = do
     ((res, widget), enctype)  <- runFormPostNoToken $ renderBootstrap3 BootstrapBasicForm $ blogPostEditForm blogPost
     case res of
       FormSuccess editedBlogPost  -> do
-              blogPostDBId <- runDB $ update blogPostId [ BlogPostTitle =. (blogPostTitle editedBlogPost),
-                                                          BlogPostArticle =. (blogPostArticle editedBlogPost)]
+              blogPostDBId <- runDB $ update blogPostId [ BlogPostTitle    =. (blogPostTitle editedBlogPost),
+                                                          BlogPostArticle  =. (blogPostArticle editedBlogPost),
+                                                          BlogPostEditDate =. (blogPostEditDate editedBlogPost)]
               redirect $ PostDetailsR blogPostId
       FormFailure errorMsgs -> defaultLayout $(widgetFile "errorpage")
       _                     -> defaultLayout $(widgetFile "posts/edit")

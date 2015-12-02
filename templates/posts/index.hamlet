@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-sm-12 blog-main">
       $forall Entity blogPostId blogPost <- blogPosts
-        <div class="blog-post" resource="http://steveroggenkamp.com/posts/#{show $ fromSqlKey blogPostId}"><p>#{renderDate $ blogPostPostDate blogPost}<span class="list-title">&nbsp;&nbsp;  <a href="http://localhost:3000/posts/#{show $ fromSqlKey blogPostId}">#{blogPostTitle blogPost}</a></span>
+        <div class="blog-post" resource=@{PostDetailsR blogPostId}><p>#{renderDate $ blogPostPostDate blogPost}<span class="list-title">&nbsp;&nbsp;  <a href=@{PostDetailsR blogPostId}>#{blogPostTitle blogPost}</a></span>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
